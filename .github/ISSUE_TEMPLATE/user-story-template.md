@@ -7,13 +7,6 @@ assignees: ''
 
 ---
 
-## User Story
-| Metadata | Description |
-| -------- | ----------- |
-| Epic | - |
-| User Story | - |
-
-
 ## Description
 **As a** Role ,**I want** capability, **So that** benefit.
 
