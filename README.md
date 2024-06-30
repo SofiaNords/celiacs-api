@@ -1,5 +1,7 @@
 ## Technologies Used
 
+Generic Views where used as a shortcut for common usage patterns.
+
 ### Languages Used
 
 - Python
