@@ -6,7 +6,7 @@ from selected.serializers import SelectSerializer
 
 class SelectList(generics.ListCreateAPIView):
     """
-    List selected or create a select if logged in.
+    List select or create a select if logged in.
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = SelectSerializer
@@ -18,7 +18,7 @@ class SelectList(generics.ListCreateAPIView):
 
 class SelectDetail(generics.RetrieveDestroyAPIView):
     """
-    Retrieve a like or delete it by id if you own it.
+    Retrieve a select or delete it by id if you own it.
     """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = SelectSerializer
