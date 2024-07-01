@@ -59,8 +59,7 @@ REST_AUTH_SERIALIZERS = {'USER_DETAILS_SERIALIZER': 'celiacs_api.serializers.Cur
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = 'DEV' in os.environ
+DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['8000-sofianords-celiacsapi-zltkle6gtsu.ws.codeinstitute-ide.net', 'celiacs-api-bf52b941b62a.herokuapp.com']
 
