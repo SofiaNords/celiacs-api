@@ -61,7 +61,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-sofianords-celiacsapi-zltkle6gtsu.ws.codeinstitute-ide.net', 'celiacs-api-bf52b941b62a.herokuapp.com']
+ALLOWED_HOSTS = [
+    '8000-sofianords-celiacsapi-zltkle6gtsu.ws.codeinstitute-ide.net',
+    os.environ.get('ALLOWED_HOST'),
+]
 
 # Application definition
 
