@@ -62,7 +62,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 # DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-sofianords-celiacsapi-zltkle6gtsu.ws.codeinstitute-ide.net', 'celiacs-api-bf52b941b62a.herokuapp.com/']
+ALLOWED_HOSTS = ['8000-sofianords-celiacsapi-zltkle6gtsu.ws.codeinstitute-ide.net', 'celiacs-api-bf52b941b62a.herokuapp.com']
 
 # Application definition
 
