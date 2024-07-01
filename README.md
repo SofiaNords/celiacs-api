@@ -25,4 +25,5 @@ Generic Views where used as a shortcut for common usage patterns.
 - [GitHub](https://github.com/) - Used as the IDE for development
 - [GitPod](https://www.gitpod.io/) - Used as the IDE for development
 - [Gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) - Used as the Web Server to run Django on Heroku
+- [Heroku](https://dashboard.heroku.com/) - Used to deploy the API
 - [Psycopg](https://pypi.org/project/psycopg2/) - Used as a database adapter to support the connection to database
