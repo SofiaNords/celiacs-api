@@ -31,7 +31,10 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication' 
         if 'DEV' in os.environ 
         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
-    )]
+    )],
+    'DEFAULT_PAGINATION_CLASS':
+        'rest_framework.pagination.PageNumberPagination',
+        'PAGE_SIZE': 10,
 }
 
 REST_USE_JWT = True
@@ -51,7 +54,6 @@ SECRET_KEY = 'django-insecure-c-r54&t&w3+1-ad@^j^26nyl^5dp6*u^r#-!svbj@d%*(z1@ux
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-sofianords-celiacsapi-zltkle6gtsu.ws.codeinstitute-ide.net']
-
 
 # Application definition
 
