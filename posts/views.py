@@ -17,7 +17,13 @@ class PostList(generics.ListCreateAPIView):
         select_count=Count('select', distinct=True)
     ).order_by('created_at')
     filter_backends = [
-        filters.OrderingFilter
+        filters.OrderingFilter,
+        filters.SearchFilter,
+    ]
+    search_fields = [
+        'owner__username',
+        'title',
+        'location',
     ]
     ordering_fields = [
         'comments_count',
@@ -40,7 +46,7 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
         select_count=Count('select', distinct=True)
     ).order_by('created_at')
     filter_backends = [
-        filters.OrderingFilter
+        filters.OrderingFilter,
     ]
     ordering_fields = [
         'comments_count',
