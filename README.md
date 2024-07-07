@@ -1,3 +1,12 @@
+
+## Bugs
+
+I realised that the comment I entered on one post was visible on all posts.
+After troubleshooting in the frontend, I got a tip from Tutor Support to look in the backend.
+It turned out that I missed to put DjangoFilterBackend in my Comment View.
+After fixing this, the comments worked as they should. The comment was only visible on the 
+post it was added to.
+
 ## Technologies Used
 
 Generic Views where used as a shortcut for common usage patterns.
@@ -22,7 +31,7 @@ Generic Views where used as a shortcut for common usage patterns.
 - [dj-database-url](https://pypi.org/project/dj-database-url/) - Used to configure the application and define the database connection in an url
 - [dj-rest-auth](https://dj-rest-auth.readthedocs.io/) - Used for handling authentication securely
 - [Git](https://git-scm.com/) - Used for version control
-- [GitHub](https://github.com/) - Used as the IDE for development
+- [GitHub](https://github.com/) - Used to store the code
 - [GitPod](https://www.gitpod.io/) - Used as the IDE for development
 - [Gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) - Used as the Web Server to run Django on Heroku
 - [Heroku](https://dashboard.heroku.com/) - Used to deploy the API
