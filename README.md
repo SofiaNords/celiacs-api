@@ -1,11 +1,29 @@
+# Celiac's Choice - API
 
-## Bugs
+This is the README that provides information about the API in the Celiac's Choice project.
 
-I realised that the comment I entered on one post was visible on all posts.
-After troubleshooting in the frontend, I got a tip from Tutor Support to look in the backend.
-It turned out that I missed to put DjangoFilterBackend in my Comment View.
-After fixing this, the comments worked as they should. The comment was only visible on the 
-post it was added to.
+You can acess the API [here.](https://celiacs-api-bf52b941b62a.herokuapp.com/)
+
+The application i developed using the Django Rest framework for the back end and React for the front end. 
+
+This is the back end part of the project, the front end part can be found [here](https://github.com/SofiaNords/celiacs-choice).
+
+## Table of Content
+
+- [Celiac's Choice - API](#celiacs-choice---api)
+- [Table of Content](#table-of-content)
+- [Entity Relationship Diagram](#entity-relationship-diagram)
+- [Technologies Used](#technologies-used)
+    - [Languagaes Used](#languages-used)
+    - [Database Used](#database-used)
+    - [Frameworks Libraries Tools & Programs Used](#frameworks-libraries-tools--programs)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+
+
+## Entity Relationship Diagram
+
 
 ## Technologies Used
 
@@ -17,6 +35,7 @@ Generic Views where used as a shortcut for common usage patterns.
 
 
 ### Database Used
+
 
 
 ### Frameworks, Libraries, Tools & Programs
@@ -36,3 +55,15 @@ Generic Views where used as a shortcut for common usage patterns.
 - [Gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) - Used as the Web Server to run Django on Heroku
 - [Heroku](https://dashboard.heroku.com/) - Used to deploy the API
 - [Psycopg](https://pypi.org/project/psycopg2/) - Used as a database adapter to support the connection to database
+
+## Testing
+
+## Bugs
+
+I realised that the comment I entered on one post was visible on all posts.
+After troubleshooting in the frontend, I got a tip from Tutor Support to look in the backend.
+It turned out that I missed to put DjangoFilterBackend in my Comment View.
+After fixing this, the comments worked as they should. The comment was only visible on the 
+post it was added to.
+
+## Deployment
