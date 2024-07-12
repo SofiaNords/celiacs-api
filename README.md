@@ -4,9 +4,9 @@ This is the README that provides information about the API in the Celiac's Choic
 
 You can acess the API [here.](https://celiacs-api-bf52b941b62a.herokuapp.com/)
 
-The application is developed using the Django Rest framework for the back end and React for the front end. 
+The application is developed using the Django Rest framework for the Back end and React for the Front end. 
 
-This is the back end part of the project, the front end part can be found [here](https://github.com/SofiaNords/celiacs-choice).
+This is the Back end part of the project, the Front end part can be found [here](https://github.com/SofiaNords/celiacs-choice).
 
 ## Table of Content
 

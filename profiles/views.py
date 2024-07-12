@@ -42,4 +42,3 @@ class ProfileDetail(generics.RetrieveUpdateAPIView):
         'selected_count',
     ]
     serializer_class = ProfileSerializer
-    

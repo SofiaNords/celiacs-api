@@ -59,4 +59,3 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
         'selected_count',
         'selected__created_at'
     ]
-    
