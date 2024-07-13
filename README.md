@@ -27,16 +27,13 @@ This is the Back end part of the project, the Front end part can be found [here]
 
 ## Technologies Used
 
-Generic Views where used as a shortcut for common usage patterns.
-
 ### Languages Used
 
 - Python
 
-
 ### Database Used
 
-
+- [PostgreSQL](https://dbs.ci-dbs.net/manage/) - Used to store the data
 
 ### Frameworks, Libraries, Tools & Programs
 
@@ -54,6 +51,7 @@ Generic Views where used as a shortcut for common usage patterns.
 - [GitPod](https://www.gitpod.io/) - Used as the IDE for development
 - [Gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) - Used as the Web Server to run Django on Heroku
 - [Heroku](https://dashboard.heroku.com/) - Used to deploy the API
+- [Lucidchart](https://www.lucidchart.com/) - Used to create Entity Relationship Diagrams (ERD)
 - [Psycopg](https://pypi.org/project/psycopg2/) - Used as a database adapter to support the connection to database
 
 ## Testing
