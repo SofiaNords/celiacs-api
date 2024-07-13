@@ -24,6 +24,7 @@ This is the Back end part of the project, the Front end part can be found [here]
 
 ## Entity Relationship Diagram
 
+![Entity Relationship Diagram](docs/erd.png)
 
 ## Technologies Used
 
