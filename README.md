@@ -57,7 +57,7 @@ This is the Back end part of the project, the Front end part can be found [here]
 
 ## Testing
 
-The API was tested by interacting with Front End. 
+The API was tested by interacting with the Front End. 
 
 [Test Document](https://docs.google.com/spreadsheets/d/1cT4z1t5p8EcwzSDX7WlpFXLf3zcVW32OgnlrwBf_hpk/edit?usp=sharing)
 
