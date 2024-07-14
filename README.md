@@ -79,15 +79,36 @@ The API was deployed using the Heroku platform and can be accessed [here.](https
 
 3. Create a new application on Heroku: From your Heroku dashboard, create a new application and select the appropriate region.
 
-4. Install and configure extra libraries: Install dj_database_url with: pip install dj_database_url
-Install gunicurn with: pip install gunicorn
+4. Install and configure extra libraries: Compare with requirements.txt
 
 5. Create a Procfile: Add release and web info to let Heroku know how to run the project.
 
-5. Set environment variables: In you local env.py file, set your environment variables ('CLOUDINARY_URL', 'DEV', 'DATABASE_URL', 'SECRET_KEY'). These variables should also be added to your Heroku app settings under the Config Vars section. This ensures that these services can communicate with your Heroku app. 
+6. Set environment variables: In you local env.py file, set your environment variables ('CLOUDINARY_URL', 'DEV', 'DATABASE_URL', 'SECRET_KEY'). These variables should also be added to your Heroku app settings under the Config Vars section. This ensures that these services can communicate with your Heroku app. Create a session authentication value (differentiates between Dev and Prod mode): os.environ['DEV']='1'
 
-6. Database management: Ensure that all database migrations have been made and the current state of your models is reflected in the database schema. 
+7. Database management: Ensure that all database migrations have been made and the current state of your models is reflected in the database schema. 
 
-7. Deployment process: In your Heroku dashboard, go to your application's deploy page. Connect your GitHub repository to your Heroku application under the "Deployment method" section. Under the "Manual deploy" section, select the branch you want to deploy and click "Deploy Branch".
+8. Deployment process: In your Heroku dashboard, go to your application's deploy page. Connect your GitHub repository to your Heroku application under the "Deployment method" section. Under the "Manual deploy" section, select the branch you want to deploy and click "Deploy Branch".
 
-8. Verify Deployment: Once the deployment is successful, Heroku will provide an URL to access the live application. Test the application to ensure all components are functioning properly. 
+9. Verify Deployment: Once the deployment is successful, Heroku will provide an URL to access the live application. Test the application to ensure all components are functioning properly. 
+
+Fork the repository
+
+1. Got to the GitHub repository.
+
+2. Click the button with FORK on it on your right hand side.
+
+3. A new page "Create new Fork" will open, you can also edit the name if you would like.
+
+4. At the bottom of the page - click on CREATE FORK.
+
+5. Now you have a copy of the project in your repositories.
+
+Clone the repository
+
+1. Go to the GitHub repository.
+
+2. Click on the Code tab and copy the web URL.
+
+3. Open the terminal in the code editor of your choice, and change the current working directory to the one you will use to clone the repository.
+
+4. Type: "git clone" inte the terminal and then paste the link you copied before and press ENTER.
