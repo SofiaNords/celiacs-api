@@ -61,6 +61,8 @@ The API was tested by interacting with the Front End.
 
 [Test Document](https://docs.google.com/spreadsheets/d/1cT4z1t5p8EcwzSDX7WlpFXLf3zcVW32OgnlrwBf_hpk/edit?usp=sharing)
 
+As you can see in the above test document, there is room for improvement in the Lighthouse tests. For the next release, I intend to reduce pagination and the image size limit to improve performance.
+
 ## Bugs
 
 I realised that the comment I entered on one post was visible on all posts.
