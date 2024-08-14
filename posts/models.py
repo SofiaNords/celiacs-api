@@ -37,7 +37,7 @@ class Post(models.Model):
     score = models.CharField(
         max_length=2,
         choices=SCORE_CHOICES,
-        default='OK',
+        default='Okay',
     )
 
     class Meta:
