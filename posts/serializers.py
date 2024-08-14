@@ -27,7 +27,7 @@ class PostSerializer(serializers.ModelSerializer):
     select_count = serializers.ReadOnlyField()
 
     # Field to display the full description of the score
-    score_display = serializers.SerializerMethodField()
+    # score_display = serializers.SerializerMethodField()
 
     # Method to validate the image field
     def validate_image(self, value):
@@ -69,5 +69,6 @@ class PostSerializer(serializers.ModelSerializer):
             'profile_image', 'created_at', 'updated_at',
             'title', 'location', 'content', 'image',
             'select_id', 'comments_count', 'select_count',
-            'score', 'score_display',
+            'score',
+            # 'score_display',
         ]
