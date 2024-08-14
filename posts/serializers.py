@@ -62,6 +62,10 @@ class PostSerializer(serializers.ModelSerializer):
             ).first()
             return select.id if select else None
 
+     # Method to get the full description of the score
+    def get_score_display(self, obj):
+        return obj.get_score_display()
+
     class Meta:
         model = Post
         fields = [
