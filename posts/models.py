@@ -27,6 +27,19 @@ class Post(models.Model):
         upload_to='images/', default='../default_post_ptvomy', blank=True
     )
 
+    # CharField to store the score of the post with choices
+    SCORE_CHOICES = [
+        ('OK', 'Okay'),
+        ('GD', 'Good'),
+        ('GT', 'Great'),
+    ]
+    
+    score = models.CharField(
+        max_length=2,
+        choices=SCORE_CHOICES,
+        default='OK',
+    )
+
     class Meta:
         # Order posts by creation time in descending order
         ordering = ['-created_at']

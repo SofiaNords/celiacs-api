@@ -26,6 +26,9 @@ class PostSerializer(serializers.ModelSerializer):
     # Read-only field to display the count of selects on the post
     select_count = serializers.ReadOnlyField()
 
+    # Read-only field to display the score of the post
+    score = serializers.ReadOnlyField()
+
     # Method to validate the image field
     def validate_image(self, value):
         # Check if the image size is larger than 2MB
@@ -66,4 +69,5 @@ class PostSerializer(serializers.ModelSerializer):
             'profile_image', 'created_at', 'updated_at',
             'title', 'location', 'content', 'image',
             'select_id', 'comments_count', 'select_count',
+            'score'
         ]

@@ -65,7 +65,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-sofianords-celiacsapi-zltkle6gtsu.ws.codeinstitute-ide.net',
+    '8000-sofianords-celiacsapi-rvcq66r5907.ws.codeinstitute-ide.net',
     os.environ.get('ALLOWED_HOST'),
 ]
 
@@ -117,6 +117,7 @@ CORS_ALLOWED_ORIGINS = [os.environ.get('CLIENT_ORIGIN_DEV')]
 #     CORS_ALLOWED_ORIGIN_REGEXES = [
 #         rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
 #     ]
+
 #     CORS_ALLOWED_ORIGINS = [
 #         os.environ.get('CLIENT_ORIGIN')
 #     ]

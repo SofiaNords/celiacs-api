@@ -29,18 +29,21 @@ class PostList(generics.ListCreateAPIView):
     filterset_fields = [
         'select__owner__profile',
         'owner__profile',
+        'score',
     ]
     # Define the fields that can be used for searching
     search_fields = [
         'owner__username',
         'title',
         'location',
+        'score',
     ]
     # Define the fields that can be used for ordering
     ordering_fields = [
         'comments_count',
         'selected_count',
-        'selected__created_at'
+        'selected__created_at',
+        'score',
     ]
 
     # Method to save the owner of the post when creating a new post
@@ -69,5 +72,6 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     ordering_fields = [
         'comments_count',
         'selected_count',
-        'selected__created_at'
+        'selected__created_at',
+        'score',
     ]
