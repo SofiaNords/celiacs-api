@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from posts.models import Post
 from selected.models import Select
+from category.models import Category
 
 
 # Serializer for the Post model
@@ -28,6 +29,14 @@ class PostSerializer(serializers.ModelSerializer):
 
     # Field to display the full description of the score
     score_display = serializers.SerializerMethodField()
+
+    # SlugRelatedField to represent the category by its name, allows null values and is not required
+    category = serializers.SlugRelatedField(
+        queryset=Category.objects.all(),  # Queryset of all Category objects
+        slug_field='name',  # Use the 'name' field of the Category model as the slug
+        allow_null=True,  # Allow the field to be null
+        required=False  # The field is not mandatory
+    )
 
     # Method to validate the image field
     def validate_image(self, value):
@@ -73,5 +82,5 @@ class PostSerializer(serializers.ModelSerializer):
             'profile_image', 'created_at', 'updated_at',
             'title', 'location', 'content', 'image',
             'select_id', 'comments_count', 'select_count',
-            'score', 'score_display',
+            'score', 'score_display', 'category',
         ]
