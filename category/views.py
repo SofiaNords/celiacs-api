@@ -1,4 +1,4 @@
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Category
 from .serializers import CategorySerializer
@@ -11,6 +11,9 @@ class CategoryList(generics.ListCreateAPIView):
 
     # Set the permission classes for the view
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    # Define the queryset 
+    queryset = Category.objects.all()
 
     # Specify the filter backends to use for filtering, searching, and ordering
     filter_backends = [
@@ -29,7 +32,7 @@ class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CategorySerializer
 
     # Set the permission classes for the view
-    permission_classes = [IsOwnerOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     # Define the queryset
     queryset = Category.objects.all()
