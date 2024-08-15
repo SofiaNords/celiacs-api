@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from category.models import Category
 
 
 class Post(models.Model):
@@ -39,6 +40,11 @@ class Post(models.Model):
         choices=SCORE_CHOICES,
         default='OK',
     )
+
+    # ForeignKey relationship to Category model
+    # Allows null values and blank entries
+    # If the referenced Category is deleted, set this field to NULL
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
 
     class Meta:
         # Order posts by creation time in descending order
