@@ -37,6 +37,7 @@ class PostList(generics.ListCreateAPIView):
         'title',
         'location',
         'category__name',
+        'score__name',
     ]
     # Define the fields that can be used for ordering
     ordering_fields = [
