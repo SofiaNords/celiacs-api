@@ -30,10 +30,11 @@ class PostSerializer(serializers.ModelSerializer):
     # Field to display the full description of the score
     score_display = serializers.SerializerMethodField()
 
-    # SlugRelatedField to represent the category by its name, allows null values and is not required
+    # SlugRelatedField to represent the category by its name
+    # allows null values and is not required
     category = serializers.SlugRelatedField(
         queryset=Category.objects.all(),  # Queryset of all Category objects
-        slug_field='name',  # Use the 'name' field of the Category model as the slug
+        slug_field='name',  # Use the 'name' field as the slug
         allow_null=True,  # Allow the field to be null
         required=False  # The field is not mandatory
     )

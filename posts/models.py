@@ -34,7 +34,7 @@ class Post(models.Model):
         ('GD', 'Good'),
         ('GT', 'Great'),
     ]
-    
+
     score = models.CharField(
         max_length=2,
         choices=SCORE_CHOICES,
@@ -44,7 +44,9 @@ class Post(models.Model):
     # ForeignKey relationship to Category model
     # Allows null values and blank entries
     # If the referenced Category is deleted, set this field to NULL
-    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        Category, null=True, blank=True, on_delete=models.SET_NULL
+    )
 
     class Meta:
         # Order posts by creation time in descending order

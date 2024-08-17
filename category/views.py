@@ -4,6 +4,7 @@ from .models import Category
 from .serializers import CategorySerializer
 from celiacs_api.permissions import IsOwnerOrReadOnly
 
+
 # View for listing and creating categories
 class CategoryList(generics.ListCreateAPIView):
     # Specify the serializer class to use
@@ -12,7 +13,7 @@ class CategoryList(generics.ListCreateAPIView):
     # Set the permission classes for the view
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-    # Define the queryset 
+    # Define the queryset
     queryset = Category.objects.all()
 
     # Specify the filter backends to use for filtering, searching, and ordering
@@ -25,6 +26,7 @@ class CategoryList(generics.ListCreateAPIView):
     filterset_fields = [
         'name',
     ]
+
 
 # View for retrieving, updating and deleting a specific category
 class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
