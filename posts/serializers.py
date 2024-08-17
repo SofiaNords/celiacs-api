@@ -73,7 +73,13 @@ class PostSerializer(serializers.ModelSerializer):
 
     # Method to get the full description of the score
     def get_score_display(self, obj):
-        return obj.get_score_display()
+        # Translate internal score codes to user-friendly terms
+        score_translation = {
+            'OK': 'Okay',
+            'GD': 'Good',
+            'GT': 'Great',
+        }
+        return score_translation.get(obj.score, obj.score)
 
     class Meta:
         model = Post
