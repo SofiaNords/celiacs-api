@@ -46,6 +46,20 @@ class PostList(generics.ListCreateAPIView):
         'score',
     ]
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        search_query = self.request.query_params.get('search', None)
+        if search_query:
+            # Översätt användarvänliga termer till interna koder
+            score_translation = {
+                'Okay': 'OK',
+                'Good': 'GD',
+                'Great': 'GT',
+            }
+            translated_query = score_translation.get(search_query, search_query)
+            queryset = queryset.filter(score=translated_query)
+        return queryset
+
     # Method to save the owner of the post when creating a new post
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
