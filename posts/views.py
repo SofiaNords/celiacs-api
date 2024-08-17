@@ -5,6 +5,7 @@ from celiacs_api.permissions import IsOwnerOrReadOnly
 from .models import Post, Category
 from .serializers import PostSerializer
 
+
 # View for listing and creating posts
 class PostList(generics.ListCreateAPIView):
     # Specify the serializer class to use
@@ -45,20 +46,6 @@ class PostList(generics.ListCreateAPIView):
         'selected__created_at',
         'score',
     ]
-
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        search_query = self.request.query_params.get('search', None)
-        if search_query:
-            # Translate user-friendly terms to internal codes
-            score_translation = {
-                'Okay': 'OK',
-                'Good': 'GD',
-                'Great': 'GT',
-            }
-            translated_query = score_translation.get(search_query, search_query)
-            queryset = queryset.filter(score=translated_query)
-        return queryset
 
     # Method to save the owner of the post when creating a new post
     def perform_create(self, serializer):
