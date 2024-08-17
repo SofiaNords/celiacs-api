@@ -2,7 +2,7 @@ from django.db.models import Count
 from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from celiacs_api.permissions import IsOwnerOrReadOnly
-from .models import Post
+from .models import Post, Category
 from .serializers import PostSerializer
 
 
@@ -37,6 +37,7 @@ class PostList(generics.ListCreateAPIView):
         'title',
         'location',
         'score',
+        'category',
     ]
     # Define the fields that can be used for ordering
     ordering_fields = [
