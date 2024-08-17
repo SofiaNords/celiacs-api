@@ -4,7 +4,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from celiacs_api.permissions import IsOwnerOrReadOnly
 from .models import Post, Category
 from .serializers import PostSerializer
-
+from .filters import PostFilter
 
 # View for listing and creating posts
 class PostList(generics.ListCreateAPIView):
@@ -26,6 +26,7 @@ class PostList(generics.ListCreateAPIView):
         DjangoFilterBackend,
     ]
     # Define the fields that can be used for filtering
+    filterset_class = PostFilter
     filterset_fields = [
         'select__owner__profile',
         'owner__profile',
