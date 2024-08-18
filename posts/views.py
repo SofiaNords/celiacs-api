@@ -76,16 +76,3 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
         'selected__created_at',
         'score',
     ]
-
-    def get_object(self):
-        # This method will be called to retrieve the object
-        queryset = self.get_queryset()
-        filter_kwargs = {self.lookup_field: self.kwargs[self.lookup_field]}
-        
-        # Use get_object_or_404 to ensure a 404 response if the object is not found
-        obj = get_object_or_404(queryset, **filter_kwargs)
-        
-        # Check permissions
-        self.check_object_permissions(self.request, obj)
-        
-        return obj
